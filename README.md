@@ -15,4 +15,21 @@
 git init // Инициализация проекта в git локально
 # результат - Initialized empty Git repository in C:/Users/user_name/../Projekt/nameApp/.git/
 # Далее создаем файл описания README.md или основной файл проекта index.txt
-git add README.md // Добавление в индексацию git одного файла
+git add <file> // Добавление в индексацию git одного файла
+# Файл добавлен, для исключени введите команду ниже
+    git rm --cached <file> // Удаление из проекта git указанного файла
+    # Файл исключен
+    git status // Проверка проведенных действий и наличия изменений проделанных с файлами данной дериктории.
+git commit -m "first commit" // Добавляем первый commit
+# результат - [master (root-commit) f277d1d] first commet
+ 1 file changed, 18 insertions(+)
+ create mode 100644 <file>
+ git log // Выводит информацию об истории внесенных комитов
+# результат - commit f277d1d062b8b2086f123a5d700bad14207245c8 (HEAD -> master)
+Author: Aleksey <aleksej2203@yandex.ru>
+Date:   Sat Oct 21 11:02:51 2023 +0700
+git branch // Показывает какие есть ветки у данного проекта
+# результат - *master
+git branch -M main // Переименовывает название текущей ветки проекта
+# результат - *main
+git remote add origin <SHH_adr_rep> // Подключение локального репозитория к удаленному
