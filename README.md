@@ -36,3 +36,42 @@
     git remote add origin <SHH_adr_rep> // Подключение локального репозитория к удаленному
     git remote rm origin // отключение от удаленного репозитория
     git push -u origin <name_branch> // Перенос данных из локального репозитория в удаленный
+# II. Работа с локальным репозиторием
+    1. Глобальные настройки локального репозитория. 
+    git config --list --show-origin // Просмотр всех установленных настроек на удаленном репозитории.
+    git config --list // Просмотр текущей конфигурации
+    git config user.name "user_name" // Изменение ФИО репозиторя
+    git config user.email "user@email" // Изменение email репозиторя
+    git config --global user.name "user_name"// Изменение ФИО для всех локальных репозиториев.
+    git config --global user.email "user@email" // Изменение email для всех локальных репозиториев.
+    git config user.name // Проверка имени текущего пользователя
+    git config user.email // Проверка email текущего пользователя
+    git init // Инизиализация git текущего репозитория для отслеживания, при первой инициализации автоматически создается ветка master.
+    git status // Проверка статуса файлов лтслеживаемой git директории.
+    git add <name_file> // Добавить файл для отслеживания
+    git add . // Добавить все содержимое каталога.
+    git add --all // Аналогичная предыдущей команде.
+# - пример - On branch main
+    Your branch is up to date with 'origin/main'.
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            modified:   README.md
+            new file:   app.cpp
+    git rm --cached <file> // Удаление файла из отслеживания git    
+    git rm -r --cached <folder> // Удаление папки из отслеживания git
+    git branch // Показывает наименование веток проекта, на текущей ветки есть пометка *.
+    git branch <name> // Создание новой ветки
+    git checkout <name of branch> // Переключение между ветками.
+    git checkout branch <name of new branch> // Создает новую ветку и сразу на нее переключается.
+    git checkout -b <name of branch> // Аналогичная предыдущей команде.
+    git branch -к // Выводит список всех веток удаленного репозитория.
+    git branch -a // Выводит список всех веток, включая удаленный репозиторий.
+# Основы витвления и слияния:
+    git merge <name of merged branch> // Вливаем изменения ветки_marge в основную main.
+    git branch --merged // Выводим ветки слитые с текущей или не прошли слияние с другими.
+    git branch -d <name_branch> // Удаление указанной ветки.
+# Нельзя удалять текущую ветку, ветку в которой мы находимся. Также удалять ветку у которой есть несохраненные данные.
+    git branch -D <name of branch> // Безвозвратное удаление ветки.
+    git commit -m "text_title" // Контрольная точка сохранения изменений проделанных на локальном репозитории.
+    git reset HEAD~ // Отменить последний commit.
+    git commit --amend // Изменить сообщение в commit
