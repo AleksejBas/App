@@ -74,4 +74,4 @@
     git branch -D <name of branch> // Безвозвратное удаление ветки.
     git commit -m "text_title" // Контрольная точка сохранения изменений проделанных на локальном репозитории.
     git reset HEAD~ // Отменить последний commit.
-    git commit --amend // Изменить сообщение в commit
+    git commit --amend -m <"new_text_title"> // Изменить сообщение в commit, делать только если не отправляли данный в удаленный репозиторий командой push.
